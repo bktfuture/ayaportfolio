@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
 import React from 'react';
+import Robot from '../models/3d/Robot';
 import { Suspense } from 'react';
 
 {
@@ -17,6 +18,7 @@ const Home = () => {
 					<pointLight />
 					<spotLight />
 					<hemisphereLight />
+					<Robot />
 				</Suspense>
 			</Canvas>
 		</section>
