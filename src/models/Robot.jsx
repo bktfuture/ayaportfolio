@@ -10,6 +10,35 @@ import { useGLTF } from '@react-three/drei';
 
 const Robot = ({ isRotating, setIsRotating, ...props }) => {
 	const robotRef = useRef();
+	const { gl, viewport } = useThree();
+
+	//mouse position
+	const lastX = useRef(0);
+	const rotationSpeed = useRef(0);
+
+	const dampingFactor = 0.95;
+
+	const handlePointerDown = (e) => {
+		e.stopProgation();
+		e.preventDefault();
+		setIsRotating(true);
+
+		const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+		lastX.current = clientX;
+	};
+	const handlePointerUp = (e) => {
+		e.stopProgation();
+		e.preventDefault();
+		setIsRotating(false);
+
+		const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+	};
+
+	const handlePointerMove = (e) => {
+		e.stopProgation();
+		e.preventDefault();
+	};
+
 	const { nodes, materials } = useGLTF(robotScene);
 	return (
 		<a.group ref={robotRef} {...props}>
