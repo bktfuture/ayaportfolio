@@ -17,7 +17,7 @@ const Robot = ({ isRotating, setIsRotating, ...props }) => {
 	const lastX = useRef(0);
 	const rotationSpeed = useRef(0);
 
-	const dampingFactor = 1;
+	const dampingFactor = 0.95;
 
 	const handlePointerDown = (e) => {
 		e.stopPropagation();
@@ -42,21 +42,21 @@ const Robot = ({ isRotating, setIsRotating, ...props }) => {
 			const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
 			const delta = (clientX - lastX.current) / viewport.width; //difference
-			isRobotRef.current.rotation.y += delta * 0.05 * Math.PI;
+			isRobotRef.current.rotation.y += delta * 0.03 * Math.PI;
 
 			lastX.current = clientX;
 
-			rotationSpeed.current = delta * 0.05 * Math.PI;
+			rotationSpeed.current = delta * 0.03 * Math.PI;
 		}
 	};
 
 	const handleKeyDown = (e) => {
 		if (e.key === 'ArrowLeft') {
 			if (!isRotating) setIsRotating(true);
-			isRobotRef.current.rotation.y += 0.05 * Math.PI;
+			isRobotRef.current.rotation.y += 0.03 * Math.PI;
 		} else if (e.key === 'ArrowRight') {
 			if (!isRotating) setIsRotating(true);
-			isRobotRef.current.rotation.y -= 0.05 * Math.PI;
+			isRobotRef.current.rotation.y -= 0.03 * Math.PI;
 		}
 	};
 
@@ -72,6 +72,7 @@ const Robot = ({ isRotating, setIsRotating, ...props }) => {
 			if (Math.abs(rotationSpeed.current) < 0.001) {
 				rotationSpeed.current = 0;
 			}
+			isRobotRef.current.rotation.y += rotationSpeed.current;
 		} else {
 			const rotation = isRobotRef.current.rotation.y;
 
