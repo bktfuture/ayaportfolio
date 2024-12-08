@@ -6,7 +6,7 @@ import React from 'react';
 
 const App = () => {
 	return (
-		<main classname="bg-slate-300/200">
+		<main className="bg-slate-300/200">
 			<Router>
 				<Navbar />
 				<Routes>
