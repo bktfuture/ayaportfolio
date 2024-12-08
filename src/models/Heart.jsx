@@ -13,10 +13,8 @@ const Heart = ({ heartScale, heartPosition, isRotating }) => {
 	const bounceHeight = 0.1;
 
 	useFrame(({ clock }) => {
-		console.log('heartRef.current:', heartRef.current);
 		if (heartRef.current) {
-			// Create a bouncing effect using a sine wave
-			const time = clock.getElapsedTime(); // Get elapsed time
+			const time = clock.getElapsedTime();
 			heartRef.current.position.y = heartPosition[0] + Math.sin(time * bounceSpeed) * bounceHeight;
 		}
 	});

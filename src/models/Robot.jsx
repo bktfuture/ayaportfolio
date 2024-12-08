@@ -9,7 +9,7 @@ import { isRouteErrorResponse } from 'react-router-dom';
 import robotScene from '../assets/3d/robot.glb';
 import { useGLTF } from '@react-three/drei';
 
-const Robot = ({ isRotating, setIsRotating, ...props }) => {
+const Robot = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
 	const isRobotRef = useRef();
 	const { gl, viewport } = useThree();
 

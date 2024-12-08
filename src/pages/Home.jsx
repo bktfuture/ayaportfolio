@@ -13,6 +13,7 @@ import { useState } from 'react';
 
 const Home = () => {
 	const [isRotating, setIsRotating] = useState(false);
+	const [currentStage, setCurrentStage] = useState(1);
 
 	const adjustRobotForScreenSize = () => {
 		let screenScale = null;
@@ -58,7 +59,14 @@ const Home = () => {
 					<hemisphereLight skyColor="#ffafcc" groundColor="#003049" intensity={2} />
 					<Heart heartScale={heartScale} heartPosition={heartPosition} isRotating={isRotating} />
 					<Bg />
-					<Robot position={isRobotPosition} scale={isRobotScale} rotation={isRobotRotation} isRotating={isRotating} setIsRotating={setIsRotating} />
+					<Robot
+						position={isRobotPosition}
+						scale={isRobotScale}
+						rotation={isRobotRotation}
+						isRotating={isRotating}
+						setIsRotating={setIsRotating}
+						setCurrentStage={setCurrentStage}
+					/>
 				</Suspense>
 			</Canvas>
 		</section>
