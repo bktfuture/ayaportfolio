@@ -7,17 +7,13 @@ import Robot from '../models/Robot';
 import { Suspense } from 'react';
 import { useState } from 'react';
 
-{
-	/* <div className="abolute top-28 left-0 right-0 z-10 flex justify-center items-center">PPOOP</div> */
-}
-
 const Home = () => {
 	const [isRotating, setIsRotating] = useState(false);
 	const [currentStage, setCurrentStage] = useState(1);
 
 	const adjustRobotForScreenSize = () => {
 		let screenScale = null;
-		let screenPosition = [0, -20, -43];
+		let screenPosition = [0, -15, -43];
 		let rotation = [0, 0, 0];
 		if (window.innerWidth < 768) {
 			screenScale = [8, 8, 8];
@@ -35,7 +31,7 @@ const Home = () => {
 			screenPosition = [0, 1, 0];
 		} else {
 			screenScale = [0.0009, 0.0009, 0.0009];
-			screenPosition = [0, 1.5, 0];
+			screenPosition = [0, 2.3, 0];
 		}
 		return [screenScale, screenPosition];
 	};
@@ -51,6 +47,7 @@ const Home = () => {
 
 	return (
 		<section className="w-full h-screen relative">
+			<div className="absolute top-24 left-1/2 z-20 flex justify-center items-center">PPOOP</div>
 			<Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
 				<Suspense fallback={<Loader />}>
 					<directionalLight position={[1, 10, 1]} intensity={2} />
