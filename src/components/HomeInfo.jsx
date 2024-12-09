@@ -4,11 +4,11 @@ import React from 'react';
 import headshot from '../assets/images/hs1.png';
 
 const InfoBox = ({ text, link, btntext }) => (
-	<div className="m:text-xl rounded-lg flex items-center shadow-md  sm:leading-snug text-center text-violet-900 py-4 px-8 bg-white">
-		<p className="font-medium"> {text}</p>
-		<Link to={link} className=" neo-brutalism-white neo-btn">
+	<div className="sm:text-xl rounded-lg flex items-center shadow-md  sm:leading-snug text-center text-violet-900 py-4 px-8 bg-white ">
+		<p className=" w-42 sm:text-xl  text-violet-900 font-meduim"> {text}</p>
+		<Link to={link} className="">
 			{btntext}
-			<FaLongArrowAltRight style={{ color: 'red' }} />
+			<FaLongArrowAltRight style={{ color: 'violet' }} />
 		</Link>
 	</div>
 );
