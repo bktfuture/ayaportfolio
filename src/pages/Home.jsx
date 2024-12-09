@@ -14,12 +14,12 @@ const Home = () => {
 
 	const adjustRobotForScreenSize = () => {
 		let screenScale = null;
-		let screenPosition = [0, -15, -43];
+		let screenPosition = [0, -10, -43];
 		let rotation = [0, 0, 0];
 		if (window.innerWidth < 768) {
-			screenScale = [8, 8, 8];
+			screenScale = [7.6, 7.6, 7.6];
 		} else {
-			screenScale = [12, 12, 12];
+			screenScale = [9.6, 9.6, 9.6];
 		}
 		return [screenScale, screenPosition, rotation];
 	};
@@ -31,7 +31,7 @@ const Home = () => {
 			screenScale = [0.00009, 0.00009, 0.00009];
 			screenPosition = [0, 1, 0];
 		} else {
-			screenScale = [0.0009, 0.0009, 0.0009];
+			screenScale = [0.0006, 0.0006, 0.0006];
 			screenPosition = [0, 2.3, 0];
 		}
 		return [screenScale, screenPosition];
@@ -48,7 +48,9 @@ const Home = () => {
 
 	return (
 		<section className="w-full h-screen relative">
-			<div className="absolute bottom-32 left-1/2 z-20 flex justify-center items-center">{currentStage && <HomeInfo currentStage={currentStage} />}</div>
+			<div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 flex justify-center items-center">
+				{currentStage && <HomeInfo currentStage={currentStage} />}
+			</div>
 			<Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
 				<Suspense fallback={<Loader />}>
 					<directionalLight position={[1, 10, 1]} intensity={2} />
