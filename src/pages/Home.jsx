@@ -58,7 +58,7 @@ const Home = () => {
 
 					<hemisphereLight skyColor="#ffafcc" groundColor="#003049" intensity={2} />
 					<Heart heartScale={heartScale} heartPosition={heartPosition} isRotating={isRotating} />
-					<Bg />
+					<Bg isRotating={isRotating} />
 					<Robot
 						position={isRobotPosition}
 						scale={isRobotScale}
