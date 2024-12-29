@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedin } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
@@ -54,11 +55,17 @@ const Contact = () => {
 			<div className="flex-1 min-w-[50%] flex flex-col">
 				<h1 className="head-text">My contact information, resume and more!</h1>
 				<div className="">
+					<a href="aiturgan888@gmail.com" target="_blank">
+						<IoMdMail />
+						aiturgan888@gmail.com
+					</a>
 					<a href="https://www.linkedin.com/in/aiturgantalant/" target="_blank">
 						<FaLinkedin style={{ color: 'purple' }} />
+						linkedin.com/in/aiturgantalant/
 					</a>
 					<a href="https://github.com/bktfuture" target="_blank">
 						<FaGithub style={{ color: 'purple' }} />
+						github.com/bktfuture
 					</a>
 				</div>
 
