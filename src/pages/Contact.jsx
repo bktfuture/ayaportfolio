@@ -16,7 +16,7 @@ const Contact = () => {
 		e.preventDefault();
 		setIsLoading(true);
 		emailjs
-			.sendForm(
+			.send(
 				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
 				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
 
@@ -27,16 +27,17 @@ const Contact = () => {
 					to_email: 'aiturgan888@yahoo.com',
 					message: form.message,
 				},
-
 				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
 			)
 			.then(() => {
 				setIsLoading(false);
+
 				// TO DO: succes and hide alert
 			})
 			.catch((error) => {
 				setIsLoading(false);
 				console.log(error);
+
 				// TO DO: shoe the error message
 			});
 	};
