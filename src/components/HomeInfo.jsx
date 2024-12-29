@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import headshot from '../assets/images/hs1.png';
 import mic from '../assets/images/mic.PNG';
-const InfoBox = ({ text, link, btntext }) => (
+const InfoBox = ({ text, link, btntext, imgsrc, imgalt }) => (
 	<div className="sm:text-xl rounded-lg flex items-center shadow-md  sm:leading-snug text-center text-violet-900 py-4 px-8 bg-white ">
+		{imgsrc && <img src={imgsrc} alt={imgalt || 'Image'} className="w-32 h-32" />}
 		<p className=" w-42 sm:text-xl  text-violet-900 font-meduim"> {text}</p>
 		<Link to={link} className="">
 			{btntext}
@@ -24,6 +25,8 @@ const renderContent = {
 	),
 	2: (
 		<InfoBox
+			imgsrc={mic}
+			imgalt="Photo at Microsoft Headquarters"
 			text="I am software engineer with expirience at Microsoft, UX/UI design hobbyist and hackathon enthusiast!"
 			link="/about"
 			btntext="Learn more about me!"
