@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 const Contact = () => {
@@ -11,7 +12,34 @@ const Contact = () => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = () => {};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setIsLoading(true);
+		emailjs
+			.sendForm(
+				import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+
+				{
+					from_name: form.name,
+					to_name: 'Aiturgan',
+					from_email: form.email,
+					to_email: 'aiturgan888@yahoo.com',
+					message: form.message,
+				},
+
+				import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+			)
+			.then(() => {
+				setIsLoading(false);
+				// TO DO: succes and hide alert
+			})
+			.catch((error) => {
+				setIsLoading(false);
+				console.log(error);
+				// TO DO: shoe the error message
+			});
+	};
 
 	const handleFocus = () => {};
 	const handleBlur = () => {};
