@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 import emailjs from '@emailjs/browser';
+import together from '../assets/images/together.jpg';
 import { useRef } from 'react';
 
 const Contact = () => {
@@ -54,19 +55,25 @@ const Contact = () => {
 		<section className="relative flex lg:flex-row flex-col max-container">
 			<div className="flex-1 min-w-[50%] flex flex-col">
 				<h1 className="head-text">My contact information, resume and more!</h1>
-				<div className="">
-					<a href="aiturgan888@gmail.com" target="_blank">
-						<IoMdMail />
-						aiturgan888@gmail.com
-					</a>
-					<a href="https://www.linkedin.com/in/aiturgantalant/" target="_blank">
-						<FaLinkedin style={{ color: 'purple' }} />
-						linkedin.com/in/aiturgantalant/
-					</a>
-					<a href="https://github.com/bktfuture" target="_blank">
-						<FaGithub style={{ color: 'purple' }} />
-						github.com/bktfuture
-					</a>
+				<div className="flex lg:flex-row flex-col w-full justify-between">
+					<div className="m">
+						<a href="aiturgan888@gmail.com" target="_blank" className="flex items-center gap-4 text-lg">
+							<IoMdMail style={{ color: 'purple', fontSize: '42px' }} />
+							aiturgan888@gmail.com
+						</a>
+						<a href="https://www.linkedin.com/in/aiturgantalant/" target="_blank" className="flex items-center gap-4 underlined">
+							<FaLinkedin style={{ color: 'purple', fontSize: '42px' }} />
+							<span className="text-lg">linkedin.com/in/aiturgantalant/</span>
+						</a>
+						<a href="https://github.com/bktfuture" target="_blank" className="flex items-center gap-4 text-lg">
+							<FaGithub style={{ color: 'purple', fontSize: '42px' }} />
+							github.com/bktfuture
+						</a>
+					</div>
+					<div className="flex flex-col gap-2">
+						<img src={together} alt="Group photo at Polkadot Hackathon with Conor Daly" className="max-w-xs"></img>
+						<p className=" max-w-xs italic text-sm">Me and my friends at the Harvard Polkadot Hackthon with Conor Daly, IndyCar/NASCAR Driver</p>
+					</div>
 				</div>
 
 				<form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
