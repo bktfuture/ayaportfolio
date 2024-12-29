@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { FaGithub } from 'react-icons/fa6';
+import { FaLinkedin } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
@@ -33,6 +35,8 @@ const Contact = () => {
 				setIsLoading(false);
 
 				// TO DO: succes and hide alert
+
+				setForm({ name: '', email: '', message: '' });
 			})
 			.catch((error) => {
 				setIsLoading(false);
@@ -49,6 +53,15 @@ const Contact = () => {
 		<section className="relative flex lg:flex-row flex-col max-container">
 			<div className="flex-1 min-w-[50%] flex flex-col">
 				<h1 className="head-text">My contact information, resume and more!</h1>
+				<div className="">
+					<a href="https://www.linkedin.com/in/aiturgantalant/" target="_blank">
+						<FaLinkedin style={{ color: 'purple' }} />
+					</a>
+					<a href="https://github.com/bktfuture" target="_blank">
+						<FaGithub style={{ color: 'purple' }} />
+					</a>
+				</div>
+
 				<form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
 					<label className="text-black-500 font-semibold">
 						Name
