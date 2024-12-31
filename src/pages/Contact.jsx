@@ -55,7 +55,7 @@ const Contact = () => {
 		<section className="relative flex lg:flex-row flex-col bg-white max-container">
 			<div className="flex-1 min-w-[50%] flex flex-col">
 				<h1 className="head-text">My contact information 💜</h1>
-				<div className="flex lg:flex-row flex-col w-full justify-between pt-7">
+				<div className="flex lg:flex-row flex-col w-full justify-between items-center pt-7">
 					<div className="flex gap-4 flex-col">
 						<a href="aiturgan888@gmail.com" target="_blank" className="flex items-center gap-4 text-lg">
 							<IoMdMail style={{ color: '#8f0eff', fontSize: '42px' }} />

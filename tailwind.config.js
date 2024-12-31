@@ -3,6 +3,19 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			animation: {
+				fall: 'fall 5s linear infinite',
+			},
+			keyframes: {
+				fall: {
+					'0%': {
+						transform: 'translateY(-10%)',
+					},
+					'100%': {
+						transform: 'translateY(150vh)',
+					},
+				},
+			},
 			colors: {
 				gray: {
 					200: '#D5DAE1',

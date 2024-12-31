@@ -184,3 +184,21 @@ body:has(.card[data-color='green']:hover) {
 	border: #fff;
 	box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff, 0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+/* index.css or styles.css */
+@layer utilities {
+	.star {
+		position: fixed; /* Make stars stay fixed while scrolling */
+		opacity: 0.7;
+		animation: fall 10s linear infinite; /* Apply animation */
+	}
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-100%); /* Start from above the viewport */
+	}
+	100% {
+		transform: translateY(100vh); /* Make the stars fall beyond the viewport height */
+	}
+}
