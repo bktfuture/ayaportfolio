@@ -1,9 +1,12 @@
 import {
+	arrow,
 	car,
 	contact,
 	css,
 	estate,
 	express,
+	figma,
+	flask,
 	git,
 	github,
 	html,
@@ -14,18 +17,24 @@ import {
 	mui,
 	nextjs,
 	nodejs,
+	opencv,
 	pricewise,
+	python,
 	react,
 	redux,
 	sass,
 	snapgram,
+	soundoff,
+	soundon,
 	summiz,
-	taiilwindcss,
+	tailwindcss,
 	threads,
+	twitter,
 	typescript,
 	unity,
 } from '../assets/icons';
-import { meta, shopify, starbucks, tesla } from '../assets/images';
+
+import mc from '../assets/images/mc.png';
 
 export const skills = [
 	{
@@ -109,19 +118,19 @@ export const skills = [
 		type: 'Animation',
 	},
 	{
-		name: 'Figma',
+		name: figma,
 		type: 'Design',
 	},
 	{
-		name: 'Unity',
+		name: unity,
 		type: 'AR/VR Development',
 	},
 	{
-		name: 'Python',
-		type: 'Programming Language',
+		name: python,
+		type: 'Backend',
 	},
 	{
-		name: 'OpenCV',
+		name: opencv,
 		type: 'Computer Vision',
 	},
 ];
@@ -130,7 +139,7 @@ export const experiences = [
 	{
 		title: 'Software Engineer Intern',
 		company_name: 'Microsoft x Cyborg Mobile',
-		icon: meta,
+		icon: mc,
 		iconBg: '#a2d2ff',
 		date: 'June 2024 - August 2024',
 		points: [
