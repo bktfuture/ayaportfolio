@@ -20,28 +20,28 @@ const About = () => {
 						Hello, <br></br>I'm <span className="violet-gradient_text font-semibold drop-shadow"> Aiturgan!</span> 👋
 					</h1>
 					<div className="flex gap-3 items-center">
-						<img src={umsl} alt="University of Missouri-St. Louis" className="w-[60px]"></img>
+						<img src={umsl} alt="University of Missouri-St. Louis" className="w-[60px]" />
 						<p>Computer Science, Graduation date: 2027</p>
 					</div>
 					<div className="flex gap-3 items-center">
-						<img src={stlcc} alt="St. Louis Community College" className="w-[60px]"></img>
+						<img src={stlcc} alt="St. Louis Community College" className="w-[60px]" />
 						<p>"Pillar of STLCC" Award Recipient, Dean's List, 2024 President of TRIO Student Leadership Board, 2023 Women in STEM President</p>
 					</div>
 					<div className="flex gap-3 items-center">
-						<img src={uber} alt="University of Missouri-St. Louis" className="w-[60px]"></img>
+						<img src={uber} alt="Uber Career Prep" className="w-[60px]" />
 						<p>2024 UCP Software Engineer Fellow</p>
 					</div>
 					<div className="flex gap-3 items-center">
-						<img src={mcr} alt="University of Missouri-St. Louis" className="w-[60px]"></img>
+						<img src={mcr} alt="Microsoft" className="w-[60px]" />
 						<p>Asians @ Microsoft Mentoring International Program Recipient</p>
 					</div>
 					<div className="flex gap-3 items-center">
-						<img src={mlh} alt="University of Missouri-St. Louis" className="w-[60px]"></img>
+						<img src={mlh} alt="MLH" className="w-[60px]" />
 						<p>8 times hackathon winner with Mobile, VR and fullstack apps</p>
 					</div>
 				</div>
 
-				<img src={me} alt="Collage of photos" className="max-w-md"></img>
+				<img src={me} alt="Collage of photos" className="max-w-md" />
 			</div>
 
 			<div className="mt-10 flex justify-center gap-3 text-slate-500">
@@ -49,7 +49,6 @@ const About = () => {
 			</div>
 			<div className="py-10 flex flex-col">
 				<h3 className="subhead-text">My Skills ⚙️</h3>
-
 				<div className="mt-16 flex flex-wrap gap-12">
 					{skills.map((skill) => (
 						<div className="block-container w-20 h-20" key={skill.name}>
@@ -64,10 +63,10 @@ const About = () => {
 			<div className="py-16">
 				<h3 className="subhead-text">Work Experience 👩🏽‍💻</h3>
 				<div className="mt-5 flex flex-col gap-3 text-slate-500">
-					<p>I've worked with all sorts of companies, leveling up my skills and teaming up with smart people. Here's the rundown:</p>
+					<p>I enjoy working on challenging projects with talented people!</p>
 				</div>
 
-				<div className="mt-12 flex">
+				<div className="mt-2 flex">
 					<VerticalTimeline>
 						{experiences.map((experience, index) => (
 							<VerticalTimelineElement
@@ -94,18 +93,34 @@ const About = () => {
 								</div>
 
 								<ul className="my-5 list-disc ml-5 space-y-2">
-									{experience.points.map((point, index) => (
-										<li key={`experience-point-${index}`} className="text-black-500/50 font-normal pl-1 text-sm">
+									{experience.points.map((point, idx) => (
+										<li key={`experience-point-${idx}`} className="text-black-500/50 font-normal pl-1 text-sm">
 											{point}
 										</li>
 									))}
 								</ul>
+
+								{experience.company_name === 'Microsoft x Cyborg Mobile' && (
+									<div className="mt-2 flex flex-col gap-2">
+										<h4 className="text-sm text-violet-500 font-bold">Showcase Video:</h4>
+										<iframe
+											className="rounded-md border border-slate-300"
+											width="100%"
+											height="300"
+											src="https://www.youtube.com/embed/zuoWSaAGSos?si=AA425xBW6q2KHkvk"
+											title="Microsoft Internship Showcase"
+											frameBorder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowFullScreen
+										></iframe>
+									</div>
+								)}
 							</VerticalTimelineElement>
 						))}
 					</VerticalTimeline>
 				</div>
 			</div>
-			<hr className="border-slate-200" />
+			<hr className="border-violet-600" />
 			<CTA />
 		</section>
 	);
