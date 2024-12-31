@@ -8,11 +8,14 @@ const Navbar = () => {
 				<p className="violet-gradient_text">AYA.01</p>
 			</NavLink>
 			<nav className="flex text-lg gap-7 font-medium">
-				<NavLink to="/about" className={({ isActive }) => (isActive ? 'text-violet-500' : 'text-white')}>
-					About
+				<NavLink to="/about" className={({ isActive }) => (isActive ? 'text-violet-500' : 'text-slate-500')}>
+					About Me
 				</NavLink>
-				<NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-violet-500' : 'text-white')}>
+				<NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-violet-500' : 'text-slate-500')}>
 					Projects
+				</NavLink>
+				<NavLink to="/contact" className={({ isActive }) => (isActive ? 'text-violet-500' : 'text-slate-500')}>
+					Contact
 				</NavLink>
 			</nav>
 		</header>

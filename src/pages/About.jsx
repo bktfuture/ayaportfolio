@@ -13,7 +13,7 @@ import umsl from '../assets/images/umsl.png';
 
 const About = () => {
 	return (
-		<section className="max-container">
+		<section className="max-container bg-white">
 			<div className="flex w-full gap-2 justify-between">
 				<div className="flex gap-4 flex-col">
 					<h1 className="head-text">
