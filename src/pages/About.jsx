@@ -67,12 +67,12 @@ const About = () => {
 				</div>
 
 				<div className="mt-2 flex">
-					<VerticalTimeline>
+					<VerticalTimeline lineColor="#8634eb">
 						{experiences.map((experience, index) => (
 							<VerticalTimelineElement
 								key={experience.company_name}
 								date={experience.date}
-								iconStyle={{ background: experience.iconBg }}
+								iconStyle={{ background: 'white', color: '#8634eb', border: '3px solid #8634eb' }}
 								icon={
 									<div className="flex justify-center items-center w-full h-full">
 										<img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" />
@@ -81,7 +81,7 @@ const About = () => {
 								contentStyle={{
 									borderBottom: '8px',
 									borderStyle: 'solid',
-									borderBottomColor: experience.iconBg,
+									borderBottomColor: '#8634eb',
 									boxShadow: 'none',
 								}}
 							>
