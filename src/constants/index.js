@@ -32,8 +32,13 @@ import {
 	unity,
 } from '../assets/icons';
 
+import flower from '../assets/images/art/flower.png';
+import frog from '../assets/images/art/frog.png';
+import glass from '../assets/images/art/glass.png';
 import mc from '../assets/images/mc.png';
+import ocean from '../assets/images/art/ocean.jpg';
 import python from '../assets/icons/python.svg';
+import room from '../assets/images/art/room.png';
 import stlcc from '../assets/images/stl.jpg';
 
 export const skills = [
@@ -161,36 +166,73 @@ export const experiences = [
 
 export const projects = [
 	{
-		iconUrl: snapgram,
-		theme: 'btn-back-pink',
 		name: 'BobaBliss',
-		description:
-			'Developed a full-stack mobile app using React Native, Flask, and MongoDB, featuring a boba matching algorithm based on user preferences, location, and mood.',
-		link: 'https://github.com/bktfuture/bobabliss',
+		description: [
+			'Developed full-stack mobile application using React Native and Flask and MongoDB for backend',
+			'Implemented multiple UI animations including Tinder swiping animation using React Native Reanimated',
+			'Built boba matching algorithm that counts user’s prefereces, location and moods',
+		],
+		github: 'https://github.com/bktfuture/bobabliss',
+		youtube: 'https://www.youtube.com/watch?v=ngFfV72BvRg',
+		type: 'Fullstack',
 	},
 	{
-		iconUrl: estate,
-		theme: 'btn-back-blue',
-		name: 'Cycle',
-		description:
-			'Led a team to build an AR app using Unity and Snapdragon Spaces SDK to educate users about recycling, with UI designed in Figma and Bard API integration for image recognition.',
-		link: 'https://devpost.com/software/cycle-j4mrpa',
+		name: 'Tsunami Drill',
+		description: [
+			'In the team of two built winning VR application with Unity to scan surroundings and simulate Tsunami Drill',
+			'Utilized C# Scripting to build oxygen levels logic and water interactions with the player',
+			'Implemented Meta Depth API & Scene API to map water into the surroundings',
+		],
+		link: 'https://devpost.com/software/tsunami-simulator',
+		youtube: 'https://www.youtube.com/watch?v=njj4bv4J_uo',
+		github: 'https://github.com/CocoaMilka/Tsunami-Simulator2',
+		type: 'Fullstack',
 	},
 	{
-		iconUrl: threads,
-		theme: 'btn-back-green',
-		name: 'Song Wars',
-		description:
-			'Built a karaoke mobile app using React Native and MySQL, allowing users to create lobbies, perform, and judge songs, with UI/UX ideated and designed by me.',
-		link: 'https://devpost.com/software/song-wars',
+		name: 'EducateAll',
+		description: [
+			'Cooperated with a team of three to build a web app platform that helps tutors have engaging video call sessions',
+			'Integrated WebRTC API to establish video, audio streaming with 31.0s live stream latency',
+			'Designed backend with Next.js and Express ,WebSocket API and MySQL to store users’ data',
+		],
+		link: 'https://devpost.com/software/truhacks-2024',
+		github: 'https://github.com/JasonXu314/truhacks-2024',
+		youtube: 'https://www.youtube.com/watch?v=fsC-bcyBFTs',
+		type: 'Fullstack',
 	},
 	{
-		iconUrl: summiz,
-		theme: 'btn-back-yellow',
-		name: 'Cheat Checker',
+		name: 'Cosmos VR',
 		description:
 			'Collaborated to build a web app using Django and Python with an AI eye-tracking model to help professors ensure academic integrity, with frontend developed in HTML/CSS.',
-		link: 'https://devpost.com/software/cheat-checker',
+		link: 'https://devpost.com/software/cosmos-vr',
+		youtube:
+			'https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=Mjg2NjQsMTY0NTAz&v=YMfsDSSvXh4&feature=youtu.be',
+		github: 'https://github.com/WilliamUW/cosmosVR/',
+	},
+	{
+		name: 'Avatar Flower',
+		picUrl: flower,
+		type: 'Art',
+	},
+	{
+		name: 'Ocean',
+		picUrl: ocean,
+		type: 'Art',
+	},
+	{
+		name: 'Cozy Room',
+		picUrl: room,
+		type: 'Art',
+	},
+	{
+		name: 'Cute Frog',
+		picUrl: frog,
+		type: 'Art',
+	},
+	{
+		name: '3D Glass',
+		picUrl: glass,
+		type: 'Art',
 	},
 ];
 
