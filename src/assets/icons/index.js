@@ -18,7 +18,6 @@ import nextjs from './nextjs.svg';
 import nodejs from './nodejs.svg';
 import opencv from './opencv.svg';
 import pricewise from './pricewise.svg';
-import python from './python.svg';
 import react from './react.svg';
 import redux from './redux.svg';
 import sass from './sass.svg';
@@ -63,7 +62,6 @@ export {
 	soundoff,
 	flask,
 	unity,
-	python,
 	figma,
 	opencv,
 };

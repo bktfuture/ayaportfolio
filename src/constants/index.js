@@ -6,7 +6,6 @@ import {
 	estate,
 	express,
 	figma,
-	flask,
 	git,
 	github,
 	html,
@@ -19,7 +18,6 @@ import {
 	nodejs,
 	opencv,
 	pricewise,
-	python,
 	react,
 	redux,
 	sass,
@@ -35,16 +33,34 @@ import {
 } from '../assets/icons';
 
 import mc from '../assets/images/mc.png';
+import python from '../assets/icons/python.svg';
+import stlcc from '../assets/images/stl.jpg';
 
 export const skills = [
 	{
-		imageUrl: css,
-		name: 'CSS',
+		imageUrl: python,
+		name: 'Python',
+		type: 'Backend',
+	},
+	{
+		imageUrl: javascript,
+		name: 'JavaScript',
 		type: 'Frontend',
 	},
 	{
+		imageUrl: typescript,
+		name: 'TypeScript',
+		type: 'Frontend',
+	},
+
+	{
 		imageUrl: express,
 		name: 'Express',
+		type: 'Backend',
+	},
+	{
+		imageUrl: nodejs,
+		name: 'Node.js',
 		type: 'Backend',
 	},
 	{
@@ -58,13 +74,13 @@ export const skills = [
 		type: 'Version Control',
 	},
 	{
-		imageUrl: html,
-		name: 'HTML',
+		imageUrl: nextjs,
+		name: 'Next.js',
 		type: 'Frontend',
 	},
 	{
-		imageUrl: javascript,
-		name: 'JavaScript',
+		imageUrl: react,
+		name: 'React',
 		type: 'Frontend',
 	},
 	{
@@ -88,50 +104,31 @@ export const skills = [
 		type: 'State Management',
 	},
 	{
-		imageUrl: sass,
-		name: 'Sass',
-		type: 'Frontend',
+		imageUrl: opencv,
+		name: 'OpenCV',
+		type: 'Computer Vision',
 	},
+
 	{
 		imageUrl: tailwindcss,
 		name: 'Tailwind CSS',
 		type: 'Frontend',
 	},
-	{
-		imageUrl: typescript,
-		name: 'TypeScript',
-		type: 'Frontend',
-	},
-	{
-		imageUrl: nodejs,
-		name: 'Node.js',
-		type: 'Backend',
-	},
-	{
-		imageUrl: nextjs,
-		name: 'Next.js',
-		type: 'Frontend',
-	},
+
 	{
 		imageUrl: motion,
 		name: 'Motion',
 		type: 'Animation',
 	},
 	{
-		name: figma,
+		imageUrl: figma,
+		name: 'Figma',
 		type: 'Design',
 	},
 	{
-		name: unity,
+		imageUrl: unity,
+		name: 'Unity',
 		type: 'AR/VR Development',
-	},
-	{
-		name: python,
-		type: 'Backend',
-	},
-	{
-		name: opencv,
-		type: 'Computer Vision',
 	},
 ];
 
@@ -151,7 +148,7 @@ export const experiences = [
 	{
 		title: 'Academic Coach, Math Tutor',
 		company_name: 'TRIO Student Support Services',
-		icon: shopify,
+		icon: stlcc,
 		iconBg: '#b7e4c7',
 		date: 'September 2023 - June 2024',
 		points: [
