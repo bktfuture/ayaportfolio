@@ -15,9 +15,11 @@ const Projects = () => {
 					My <span className="violet-gradient_text drop-shadow font-semibold">Projects</span> 🎨
 				</h1>
 				<p className="text-slate-500 mt-4 text-center leading-relaxed max-w-3xl mx-auto">
-					I've embarked on numerous projects throughout the years, but these are the ones I hold closest to my heart. Many of them are open-source,
-					so if you come across something that piques your interest, feel free to explore the codebase and contribute your ideas for further
-					enhancements. Your collaboration is highly valued!
+					I've many{' '}
+					<a href="https://devpost.com/aiturgan888" className="text-purple-600 hover:underline font-semibold">
+						projects
+					</a>{' '}
+					under my belt, but these are the ones I am most proud of! Please enjoy the gallery of my UX/UI and art projects too!
 				</p>
 
 				{/* Tabs */}
@@ -95,18 +97,19 @@ const Projects = () => {
 					{/* grid grid-cols-1 md:grid-cols-2 gap-8 */}
 
 					{activeTab === 'Art' && (
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 							{filteredProjects.map((project) => (
 								<div key={project.name} className="flex flex-col items-center">
+									{/* Check if the project has a videoUrl */}
 									{project.videoUrl ? (
-										<video controls className="rounded-lg shadow-md w-full h-[200px] object-cover">
+										<video controls className="rounded-lg shadow-md w-full h-[400px] object-cover">
 											<source src={project.videoUrl} type="video/mp4" />
 											Your browser does not support the video tag.
 										</video>
 									) : (
-										<img src={project.picUrl} alt={project.name} className="rounded-lg shadow-md w-full h-[200px] object-cover" />
+										<img src={project.picUrl} alt={project.name} className="rounded-lg shadow-md w-full h-[400px] object-cover" />
 									)}
-									<h4 className="mt-2 font-semibold text-center">{project.name}</h4>
+									<h4 className="mt-4 font-semibold text-center">{project.name}</h4>
 								</div>
 							))}
 						</div>
