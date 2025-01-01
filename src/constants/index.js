@@ -32,13 +32,17 @@ import {
 	unity,
 } from '../assets/icons';
 
+import dev from '../assets/images/art/devnews.png';
+import donut from '../assets/images/art/donut.png';
 import flower from '../assets/images/art/flower.png';
 import frog from '../assets/images/art/frog.png';
 import glass from '../assets/images/art/glass.png';
+import karoke from '../assets/images/art/songwars.png';
 import mc from '../assets/images/mc.png';
 import ocean from '../assets/images/art/ocean.jpg';
 import python from '../assets/icons/python.svg';
 import room from '../assets/images/art/room.png';
+import social from '../assets/images/art/mobile.png';
 import stlcc from '../assets/images/stl.jpg';
 
 export const skills = [
@@ -202,12 +206,16 @@ export const projects = [
 	},
 	{
 		name: 'Cosmos VR',
-		description:
-			'Collaborated to build a web app using Django and Python with an AI eye-tracking model to help professors ensure academic integrity, with frontend developed in HTML/CSS.',
+		description: [
+			'In the team of two created VR and web3 application that allows users to learn about cosmos and chat with the planets of the solar system with Gemini API',
+			'Integrated Meta Voice and Dictation SDK to achieve seamless voice interactions with the app and the user',
+			'Utilized NASA`s Context Data Ingestion to create function calls with Gemini 1.5 Flash to get the information about the stars',
+		],
 		link: 'https://devpost.com/software/cosmos-vr',
 		youtube:
 			'https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=Mjg2NjQsMTY0NTAz&v=YMfsDSSvXh4&feature=youtu.be',
 		github: 'https://github.com/WilliamUW/cosmosVR/',
+		type: 'Fullstack',
 	},
 	{
 		name: 'Avatar Flower',
@@ -233,6 +241,26 @@ export const projects = [
 		name: '3D Glass',
 		picUrl: glass,
 		type: 'Art',
+	},
+	{
+		name: 'Dev News Website',
+		picUrl: dev,
+		type: 'UX/UI',
+	},
+	{
+		name: '3D Assets Website',
+		picUrl: donut,
+		type: 'UX/UI',
+	},
+	{
+		name: 'Mobile Karaoke App',
+		picUrl: karoke,
+		type: 'UX/UI',
+	},
+	{
+		name: 'Mobile Social App',
+		picUrl: social,
+		type: 'UX/UI',
 	},
 ];
 
