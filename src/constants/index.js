@@ -169,17 +169,7 @@ export const experiences = [
 ];
 
 export const projects = [
-	{
-		name: 'BobaBliss',
-		description: [
-			'Developed full-stack mobile application using React Native and Flask and MongoDB for backend',
-			'Implemented multiple UI animations including Tinder swiping animation using React Native Reanimated',
-			'Built boba matching algorithm that counts user’s prefereces, location and moods',
-		],
-		github: 'https://github.com/bktfuture/bobabliss',
-		youtube: 'https://www.youtube.com/watch?v=ngFfV72BvRg',
-		type: 'Fullstack',
-	},
+	// Fullstack Projects
 	{
 		name: 'Tsunami Drill',
 		description: [
@@ -193,18 +183,6 @@ export const projects = [
 		type: 'Fullstack',
 	},
 	{
-		name: 'EducateAll',
-		description: [
-			'Cooperated with a team of three to build a web app platform that helps tutors have engaging video call sessions',
-			'Integrated WebRTC API to establish video, audio streaming with 31.0s live stream latency',
-			'Designed backend with Next.js and Express ,WebSocket API and MySQL to store users’ data',
-		],
-		link: 'https://devpost.com/software/truhacks-2024',
-		github: 'https://github.com/JasonXu314/truhacks-2024',
-		youtube: 'https://www.youtube.com/watch?v=fsC-bcyBFTs',
-		type: 'Fullstack',
-	},
-	{
 		name: 'Cosmos VR',
 		description: [
 			'In the team of two created VR and web3 application that allows users to learn about cosmos and chat with the planets of the solar system with Gemini API',
@@ -212,14 +190,43 @@ export const projects = [
 			'Utilized NASA`s Context Data Ingestion to create function calls with Gemini 1.5 Flash to get the information about the stars',
 		],
 		link: 'https://devpost.com/software/cosmos-vr',
-		youtube:
-			'https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=Mjg2NjQsMTY0NTAz&v=YMfsDSSvXh4&feature=youtu.be',
+		youtube: 'https://www.youtube.com/watch?v=YMfsDSSvXh4',
 		github: 'https://github.com/WilliamUW/cosmosVR/',
 		type: 'Fullstack',
 	},
 	{
+		name: 'BobaBliss',
+		description: [
+			'Developed full-stack mobile application using React Native and Flask and MongoDB for backend',
+			'Implemented multiple UI animations including Tinder swiping animation using React Native Reanimated',
+			'Built boba matching algorithm that counts user’s preferences, location and moods',
+		],
+		github: 'https://github.com/bktfuture/bobabliss',
+		youtube: 'https://www.youtube.com/watch?v=ngFfV72BvRg',
+		type: 'Fullstack',
+	},
+	{
+		name: 'EducateAll',
+		description: [
+			'Cooperated with a team of three to build a web app platform that helps tutors have engaging video call sessions',
+			'Integrated WebRTC API to establish video, audio streaming with 31.0s live stream latency',
+			'Designed backend with Next.js and Express, WebSocket API and MySQL to store users’ data',
+		],
+		link: 'https://devpost.com/software/truhacks-2024',
+		github: 'https://github.com/JasonXu314/truhacks-2024',
+		youtube: 'https://www.youtube.com/watch?v=fsC-bcyBFTs',
+		type: 'Fullstack',
+	},
+
+	// Art Projects
+	{
 		name: 'Avatar Flower',
 		picUrl: flower,
+		type: 'Art',
+	},
+	{
+		name: 'Cute Frog',
+		picUrl: frog,
 		type: 'Art',
 	},
 	{
@@ -233,15 +240,12 @@ export const projects = [
 		type: 'Art',
 	},
 	{
-		name: 'Cute Frog',
-		picUrl: frog,
-		type: 'Art',
-	},
-	{
 		name: '3D Glass',
 		picUrl: glass,
 		type: 'Art',
 	},
+
+	// UX/UI Projects
 	{
 		name: 'Dev News Website',
 		picUrl: dev,

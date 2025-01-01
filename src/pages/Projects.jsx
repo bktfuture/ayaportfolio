@@ -56,7 +56,7 @@ const Projects = () => {
 									)}
 
 									{/* Title */}
-									<h4 className="text-2xl font-semibold mt-2 text-gray-800">{project.name}</h4>
+									<h4 className="text-2xl font-semibold mt-2 text-gray-800">{project.name} 🏆</h4>
 
 									{/* Description */}
 									<ul className="list-disc pl-5 mt-2 text-slate-600">
@@ -66,17 +66,7 @@ const Projects = () => {
 									</ul>
 
 									{/* Links */}
-									<div className="mt-4 flex flex-col items-center gap-2">
-										{project.github && (
-											<a
-												href={project.github}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="text-purple-600 font-semibold hover:underline"
-											>
-												GitHub
-											</a>
-										)}
+									<div className="mt-4 flex items-center justify-center gap-2">
 										{project.link && (
 											<a
 												href={project.link}
@@ -85,6 +75,16 @@ const Projects = () => {
 												className="text-purple-600 font-semibold hover:underline flex items-center gap-1"
 											>
 												<FiLink /> Link
+											</a>
+										)}
+										{project.github && (
+											<a
+												href={project.github}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="text-purple-600 font-semibold hover:underline"
+											>
+												GitHub
 											</a>
 										)}
 									</div>
