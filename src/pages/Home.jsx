@@ -1,16 +1,38 @@
+import { useEffect, useState } from 'react';
+
 import Bg from '../models/Bg';
 import { Canvas } from '@react-three/fiber';
+import { FaHeadphones } from 'react-icons/fa';
 import Heart from '../models/Heart';
 import HomeInfo from '../components/HomeInfo';
 import Loader from '../components/Loader';
 import React from 'react';
 import Robot from '../models/Robot';
 import { Suspense } from 'react';
-import { useState } from 'react';
+import { TbHeadphonesOff } from 'react-icons/tb';
+import chill from '../assets/chill.mp3';
+import soundoff from '../assets/icons/sounoff.svg';
+import soundon from '../assets/icons/soundon.svg';
+import { useRef } from 'react';
 
 const Home = () => {
+	const audioRef = useRef(new Audio(chill));
+	audioRef.current.volume = 0.4;
+	audioRef.current.loop = true;
+
 	const [isRotating, setIsRotating] = useState(false);
 	const [currentStage, setCurrentStage] = useState(1);
+	const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+	useEffect(() => {
+		if (isPlayingMusic) {
+			audioRef.current.play();
+		}
+
+		return () => {
+			audioRef.current.pause();
+		};
+	}, [isPlayingMusic]);
 
 	const adjustRobotForScreenSize = () => {
 		let screenScale = null;
@@ -69,6 +91,14 @@ const Home = () => {
 					/>
 				</Suspense>
 			</Canvas>
+
+			<div className="absolute bottom-2 left-2">
+				{isPlayingMusic ? (
+					<FaHeadphones className="w-10 h-10 text-white cursor-pointer object-contain" onClick={() => setIsPlayingMusic(false)} />
+				) : (
+					<TbHeadphonesOff className="w-10 h-10 text-white cursor-pointer object-contain" onClick={() => setIsPlayingMusic(true)} />
+				)}
+			</div>
 		</section>
 	);
 };
