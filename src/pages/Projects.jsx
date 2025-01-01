@@ -92,22 +92,21 @@ const Projects = () => {
 							))}
 						</div>
 					)}
+					{/* grid grid-cols-1 md:grid-cols-2 gap-8 */}
 
-					{/* Art Tab */}
 					{activeTab === 'Art' && (
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
 							{filteredProjects.map((project) => (
-								<div
-									key={project.name}
-									className="relative group cursor-pointer"
-									onClick={() => setPopupImage(project.picUrl)} // Set popup image
-								>
-									<img
-										src={project.picUrl}
-										alt={project.name}
-										className="rounded-lg shadow-md w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<h4 className="mt-4 font-semibold text-center text-lg">{project.name}</h4>
+								<div key={project.name} className="flex flex-col items-center">
+									{project.videoUrl ? (
+										<video controls className="rounded-lg shadow-md w-full h-[200px] object-cover">
+											<source src={project.videoUrl} type="video/mp4" />
+											Your browser does not support the video tag.
+										</video>
+									) : (
+										<img src={project.picUrl} alt={project.name} className="rounded-lg shadow-md w-full h-[200px] object-cover" />
+									)}
+									<h4 className="mt-2 font-semibold text-center">{project.name}</h4>
 								</div>
 							))}
 						</div>

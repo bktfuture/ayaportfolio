@@ -44,6 +44,7 @@ import python from '../assets/icons/python.svg';
 import room from '../assets/images/art/room1.jpg';
 import social from '../assets/images/art/mobile.png';
 import stlcc from '../assets/images/stl.jpg';
+import vid from '../assets/videos/donut.mp4';
 
 export const skills = [
 	{
@@ -227,6 +228,11 @@ export const projects = [
 	{
 		name: 'Cute Frog',
 		picUrl: frog,
+		type: 'Art',
+	},
+	{
+		name: 'Donut Animation',
+		videoUrl: vid,
 		type: 'Art',
 	},
 	{
