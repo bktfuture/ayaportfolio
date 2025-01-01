@@ -92,7 +92,7 @@ const Home = () => {
 				</Suspense>
 			</Canvas>
 
-			<div className="absolute bottom-2 left-2">
+			<div className="absolute bottom-3 left-4">
 				{isPlayingMusic ? (
 					<FaHeadphones className="w-10 h-10 text-white cursor-pointer object-contain" onClick={() => setIsPlayingMusic(false)} />
 				) : (
