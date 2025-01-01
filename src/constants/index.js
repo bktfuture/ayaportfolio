@@ -41,7 +41,7 @@ import karoke from '../assets/images/art/songwars.png';
 import mc from '../assets/images/mc.png';
 import ocean from '../assets/images/art/ocean.jpg';
 import python from '../assets/icons/python.svg';
-import room from '../assets/images/art/room.png';
+import room from '../assets/images/art/room1.jpg';
 import social from '../assets/images/art/mobile.png';
 import stlcc from '../assets/images/stl.jpg';
 
