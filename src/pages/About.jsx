@@ -33,7 +33,7 @@ const About = () => {
 					</div>
 					<div className="flex gap-3 items-center">
 						<img src={umsl} alt="University of Missouri-St. Louis" className="w-[60px]" />
-						<p>Computer Science, Graduation date: 2027</p>
+						<p>Bachelors Degree Student, Computer Science</p>
 					</div>
 					<div className="flex gap-3 items-center">
 						<img src={stlcc} alt="St. Louis Community College" className="w-[60px]" />
