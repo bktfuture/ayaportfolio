@@ -20,24 +20,24 @@ const About = () => {
 						Hello, <br></br>I'm <span className="violet-gradient_text font-semibold drop-shadow"> Aiturgan!</span> 👋
 					</h1>
 					<div className="flex gap-3 items-center">
+						<img src={mcr} alt="Microsoft" className="w-[60px]" />
+						<p>'24 Software Engineer Intern and Asians @ Microsoft Mentoring International Program Recipient</p>
+					</div>
+					<div className="flex gap-3 items-center">
+						<img src={uber} alt="Uber Career Prep" className="w-[60px]" />
+						<p>'24 UCP Software Engineer Fellow</p>
+					</div>
+					<div className="flex gap-3 items-center">
+						<img src={mlh} alt="MLH" className="w-[60px]" />
+						<p>8 times hackathon winner with Mobile, VR and fullstack apps</p>
+					</div>
+					<div className="flex gap-3 items-center">
 						<img src={umsl} alt="University of Missouri-St. Louis" className="w-[60px]" />
 						<p>Computer Science, Graduation date: 2027</p>
 					</div>
 					<div className="flex gap-3 items-center">
 						<img src={stlcc} alt="St. Louis Community College" className="w-[60px]" />
 						<p>"Pillar of STLCC" Award Recipient, Dean's List, 2024 President of TRIO Student Leadership Board, 2023 Women in STEM President</p>
-					</div>
-					<div className="flex gap-3 items-center">
-						<img src={uber} alt="Uber Career Prep" className="w-[60px]" />
-						<p>2024 UCP Software Engineer Fellow</p>
-					</div>
-					<div className="flex gap-3 items-center">
-						<img src={mcr} alt="Microsoft" className="w-[60px]" />
-						<p>Asians @ Microsoft Mentoring International Program Recipient</p>
-					</div>
-					<div className="flex gap-3 items-center">
-						<img src={mlh} alt="MLH" className="w-[60px]" />
-						<p>8 times hackathon winner with Mobile, VR and fullstack apps</p>
 					</div>
 				</div>
 
